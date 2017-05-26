@@ -1,0 +1,116 @@
+<html>
+   <head>
+      <title>Edmari's Webpage</title>
+   
+
+
+    </head>
+      
+
+
+
+    <body Background="3645876770.jpg">
+    <bgsound src="E:\project\Saved\Utada Hikaru - Flavor of Life.mp3" loop="-1">              
+
+
+
+
+       <style>.spanstyle {
+COLOR: orange; FONT-FAMILY: Verdana; FONT-SIZE: 8pt; FONT-WEIGHT: bold; POSITION: absolute; TOP: -50px; VISIBILITY: visible
+}
+body {
+OVERFLOW-X: hidden; OVERFLOW-Y: scroll; WIDTH: 100%
+}
+</style>
+<script language="javascript" type="text/javascript">       
+/* Visit http://www.yaldex.com/ for full source code
+and get more free JavaScript, CSS and DHTML scripts! */
+<!-- Begin
+var x, y;
+var step = 10;
+var flag = 0;
+
+var message = "Welcome to Edmari's Webpage ";
+message = message.split("");
+var xpos = new Array();
+for (i = 0; i <= message.length - 1; i++) {
+xpos[i] = -50;
+}
+var ypos = new Array();
+for (i = 0; i <= message.length - 1; i++) {
+ypos[i]= -50;
+}
+function handlerMM(e) {
+x = (!document.all) ? e.pageX : document.body.scrollLeft + event.clientX;
+y = (!document.all) ? e.pageY : document.body.scrollTop + event.clientY;
+flag = 1;
+}
+function makesnake() {
+if (flag == 1 && document.all) {
+for (i = message.length - 1; i >= 1; i--) {
+xpos[i] = xpos[i - 1] + step;
+ypos[i] = ypos[i - 1];
+}
+xpos[0] = x + step;
+ypos[0] = y;
+for (i = 0; i < message.length - 1; i++) {
+var thisspan = eval("document.getElementById('span" + i + "').style");
+thisspan.posLeft = xpos[i];
+thisspan.posTop = ypos[i];
+   }
+}
+else if (flag==1 && !document.all) {
+for (i = message.length - 1; i >= 1; i--) {
+xpos[i] = xpos[i - 1] + step;
+ypos[i] = ypos[i - 1];
+}
+xpos[0] = x + step;
+ypos[0] = y;
+for (i = 0; i < message.length - 1; i++) {
+var thisspan = eval("document.getElementById('span" + i + "').style");
+thisspan.left = xpos[i];
+thisspan.top = ypos[i];
+   }
+}
+var timer = setTimeout("makesnake()", 10);
+}
+window.onload = makesnake;
+// End -->
+</script>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+for (i = 0; i <= message.length-1; i++) {
+document.write("<span id='span"+i+"' class='spanstyle'>");
+document.write(message[i]);
+document.write("</span>");
+}
+if (!document.all) {
+document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+// End -->
+</script>       
+
+
+
+
+
+              <font color="#006633" size="7" face=" Arial">
+              <center>
+              <h1>Welcome to Edmari's Webpage</h1><br>
+              <img src="cloud strife.jpg" width="125" height="115"><h3>Cloud Strife</h3><br>
+              <marquee><img src="2516191733.jpg" width="150" height="170"><img src="2793568720.jpg" width="150" height="170"><img src="2153350556.jpg" width="165" height="180"><img src="3017491304.jpg" width="175" height="180"><img src="3698818280.jpg" width="155" height="175"><img src="3471429938.jpg" width="140" height="160"><img src="1970925318.jpg" width="190" height="200"><img src="2516196769.jpg" width="150" height="170"><img src="2353894254.jpg" width="215" height="220"><img src="4262965723.jpg" width="150" height="170"><img src="3765255088.jpg" width="170" height="185"><img src="200px-BenInFury.jpg" width="185" height="200"></marquee><br>
+              <p><h2>My name is Edmari Catolico Callangan. And this information has given my opinion to see my amazing things, life, and my creation.</h2><p>
+              
+                            
+             
+
+
+
+               </center>                
+           </font>
+           </body>
+</html>
+
+
+

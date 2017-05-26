@@ -1,0 +1,126 @@
+<html>
+   <head>
+      <title>Math - Sci Week</title>
+   
+
+
+    </head>
+      
+
+
+
+    <body Background="2458144563.jpg">
+    
+
+
+
+       <style>.spanstyle {
+COLOR: red; FONT-FAMILY: Verdana; FONT-SIZE: 8pt; FONT-WEIGHT: bold; POSITION: absolute; TOP: -50px; VISIBILITY: visible
+}
+body {
+OVERFLOW-X: hidden; OVERFLOW-Y: scroll; WIDTH: 100%
+}
+</style>
+<script language="javascript" type="text/javascript">       
+/* Visit http://www.yaldex.com/ for full source code
+and get more free JavaScript, CSS and DHTML scripts! */
+<!-- Begin
+var x, y;
+var step = 10;
+var flag = 0;
+
+var message = "Welcome to Math-Science website ";
+message = message.split("");
+var xpos = new Array();
+for (i = 0; i <= message.length - 1; i++) {
+xpos[i] = -50;
+}
+var ypos = new Array();
+for (i = 0; i <= message.length - 1; i++) {
+ypos[i]= -50;
+}
+function handlerMM(e) {
+x = (!document.all) ? e.pageX : document.body.scrollLeft + event.clientX;
+y = (!document.all) ? e.pageY : document.body.scrollTop + event.clientY;
+flag = 1;
+}
+function makesnake() {
+if (flag == 1 && document.all) {
+for (i = message.length - 1; i >= 1; i--) {
+xpos[i] = xpos[i - 1] + step;
+ypos[i] = ypos[i - 1];
+}
+xpos[0] = x + step;
+ypos[0] = y;
+for (i = 0; i < message.length - 1; i++) {
+var thisspan = eval("document.getElementById('span" + i + "').style");
+thisspan.posLeft = xpos[i];
+thisspan.posTop = ypos[i];
+   }
+}
+else if (flag==1 && !document.all) {
+for (i = message.length - 1; i >= 1; i--) {
+xpos[i] = xpos[i - 1] + step;
+ypos[i] = ypos[i - 1];
+}
+xpos[0] = x + step;
+ypos[0] = y;
+for (i = 0; i < message.length - 1; i++) {
+var thisspan = eval("document.getElementById('span" + i + "').style");
+thisspan.left = xpos[i];
+thisspan.top = ypos[i];
+   }
+}
+var timer = setTimeout("makesnake()", 10);
+}
+window.onload = makesnake;
+// End -->
+</script>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+for (i = 0; i <= message.length-1; i++) {
+document.write("<span id='span"+i+"' class='spanstyle'>");
+document.write(message[i]);
+document.write("</span>");
+}
+if (!document.all) {
+document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+// End -->
+</script>       
+
+
+
+
+
+              <font color="" size="6" face=" Times New Roman">
+              <center>
+              <h1>Discoveries</h1>
+              <h2>scientific Discoveries</h2>
+              <object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/B1AXbpYndGc&rel=1"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/B1AXbpYndGc&rel=1" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></embed></object>
+              <object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/MRC5KDqpZ_I"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/MRC5KDqpZ_I" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></embed></object><br>
+              <img src="61967247.jpg" width="160" height="180"><h5>laboratory</h5><br>
+              <img src="solar aurora.jpg" width="160" height="175"><h5>solar aurora</h5><br>
+              <img src="solar system.jpg" width="155" height="175"><h5>solar system</h5><br>
+              <img src="nuclear form.jpg" width="225" height="250"><h5>nuclear science</h5><br>
+              <h2>Mathematics Discoveries</h2>              
+              <img src="2414143021.jpg" width="135" height="140"><h5>Ancient Babylonian Mathematics</h5><br>
+              <img src="algebra.jpg" width="160" height="180"><h5>Algebra</h5><br>
+              <img src="1967500337.jpg" width="150" height="200"><h5>Roman Numerals</h5><br>
+              <img src="4130745896.jpg" width="195" height="210"><h5>Statistical Chart</h5><br>
+              <a href="M-Sframe.html"><h3>Back</h3></a><br> 
+
+                
+              
+       
+
+
+
+               </center>                
+           </font>
+           </body>
+</html>
+
+
+

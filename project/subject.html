@@ -1,0 +1,112 @@
+<html>
+   <head>
+      <title>Favorite Subject</title>
+      </head>
+      
+
+
+
+    <body background="einstein book.jpg">
+    <bgsound src="K:\project\Saved\Backstreet Boys - As Long As You Love Me.mp3" loop="-1">
+               
+
+
+
+
+       <style>.spanstyle {
+COLOR: red; FONT-FAMILY: Verdana; FONT-SIZE: 8pt; FONT-WEIGHT: bold; POSITION: absolute; TOP: -50px; VISIBILITY: visible
+}
+body {
+OVERFLOW-X: hidden; OVERFLOW-Y: scroll; WIDTH: 100%
+}
+</style>
+<script language="javascript" type="text/javascript">       
+/* Visit http://www.yaldex.com/ for full source code
+and get more free JavaScript, CSS and DHTML scripts! */
+<!-- Begin
+var x, y;
+var step = 10;
+var flag = 0;
+
+var message = "My Favorite Subject ";
+message = message.split("");
+var xpos = new Array();
+for (i = 0; i <= message.length - 1; i++) {
+xpos[i] = -50;
+}
+var ypos = new Array();
+for (i = 0; i <= message.length - 1; i++) {
+ypos[i]= -50;
+}
+function handlerMM(e) {
+x = (!document.all) ? e.pageX : document.body.scrollLeft + event.clientX;
+y = (!document.all) ? e.pageY : document.body.scrollTop + event.clientY;
+flag = 1;
+}
+function makesnake() {
+if (flag == 1 && document.all) {
+for (i = message.length - 1; i >= 1; i--) {
+xpos[i] = xpos[i - 1] + step;
+ypos[i] = ypos[i - 1];
+}
+xpos[0] = x + step;
+ypos[0] = y;
+for (i = 0; i < message.length - 1; i++) {
+var thisspan = eval("document.getElementById('span" + i + "').style");
+thisspan.posLeft = xpos[i];
+thisspan.posTop = ypos[i];
+   }
+}
+else if (flag==1 && !document.all) {
+for (i = message.length - 1; i >= 1; i--) {
+xpos[i] = xpos[i - 1] + step;
+ypos[i] = ypos[i - 1];
+}
+xpos[0] = x + step;
+ypos[0] = y;
+for (i = 0; i < message.length - 1; i++) {
+var thisspan = eval("document.getElementById('span" + i + "').style");
+thisspan.left = xpos[i];
+thisspan.top = ypos[i];
+   }
+}
+var timer = setTimeout("makesnake()", 10);
+}
+window.onload = makesnake;
+// End -->
+</script>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+for (i = 0; i <= message.length-1; i++) {
+document.write("<span id='span"+i+"' class='spanstyle'>");
+document.write(message[i]);
+document.write("</span>");
+}
+if (!document.all) {
+document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+// End -->
+</script>       
+
+
+
+              <font color="#0099ff" size="6" face=" Times New Roman">
+              <center>
+              <h1>My Favorite Subject</h1>
+              <p>My most favorite subject in every discussion is Math. Because i like to analyze and operate the numbers, different signs and also Algebraic expressions.</p><br>
+             <h2>Here is my favorite topics in every Mathematics:</h3><br>
+             <ul>
+                 <li>Operation in Polynomials
+                 <li>Scientific Notation
+                 <li>Solution
+                 <li>Exponents
+            </ul>
+            
+
+
+
+                </center>
+                </font>
+           </body>
+</html>

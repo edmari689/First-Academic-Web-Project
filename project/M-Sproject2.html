@@ -1,0 +1,125 @@
+<html>
+   <head>
+      <title>Math - Sci Week</title>
+   
+
+
+    </head>
+      
+
+
+
+    <body background="2458139519.jpg">
+    <bgsound src="K:\project\Saved\The Skatalites - Skalifornia.mp3" loop="5">           
+           
+
+
+
+
+       <style>.spanstyle {
+COLOR: red; FONT-FAMILY: Verdana; FONT-SIZE: 8pt; FONT-WEIGHT: bold; POSITION: absolute; TOP: -50px; VISIBILITY: visible
+}
+body {
+OVERFLOW-X: hidden; OVERFLOW-Y: scroll; WIDTH: 100%
+}
+</style>
+<script language="javascript" type="text/javascript">       
+/* Visit http://www.yaldex.com/ for full source code
+and get more free JavaScript, CSS and DHTML scripts! */
+<!-- Begin
+var x, y;
+var step = 10;
+var flag = 0;
+
+var message = "Welcome to Math-Science website ";
+message = message.split("");
+var xpos = new Array();
+for (i = 0; i <= message.length - 1; i++) {
+xpos[i] = -50;
+}
+var ypos = new Array();
+for (i = 0; i <= message.length - 1; i++) {
+ypos[i]= -50;
+}
+function handlerMM(e) {
+x = (!document.all) ? e.pageX : document.body.scrollLeft + event.clientX;
+y = (!document.all) ? e.pageY : document.body.scrollTop + event.clientY;
+flag = 1;
+}
+function makesnake() {
+if (flag == 1 && document.all) {
+for (i = message.length - 1; i >= 1; i--) {
+xpos[i] = xpos[i - 1] + step;
+ypos[i] = ypos[i - 1];
+}
+xpos[0] = x + step;
+ypos[0] = y;
+for (i = 0; i < message.length - 1; i++) {
+var thisspan = eval("document.getElementById('span" + i + "').style");
+thisspan.posLeft = xpos[i];
+thisspan.posTop = ypos[i];
+   }
+}
+else if (flag==1 && !document.all) {
+for (i = message.length - 1; i >= 1; i--) {
+xpos[i] = xpos[i - 1] + step;
+ypos[i] = ypos[i - 1];
+}
+xpos[0] = x + step;
+ypos[0] = y;
+for (i = 0; i < message.length - 1; i++) {
+var thisspan = eval("document.getElementById('span" + i + "').style");
+thisspan.left = xpos[i];
+thisspan.top = ypos[i];
+   }
+}
+var timer = setTimeout("makesnake()", 10);
+}
+window.onload = makesnake;
+// End -->
+</script>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+for (i = 0; i <= message.length-1; i++) {
+document.write("<span id='span"+i+"' class='spanstyle'>");
+document.write(message[i]);
+document.write("</span>");
+}
+if (!document.all) {
+document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+// End -->
+</script>       
+
+
+
+
+
+              <font color="" size="6" face=" Times New Roman">
+              <center>
+              <h1>General Research</h1>
+              <p><h4>General research is a research that you can learn from some topics that may be familiar with it. The following topics were listed in the chart:</h4></p>
+              <table border="6" bordercolor="#003300" width="100%" height="150">
+              <caption valign="top" align="middle"><h3><bold>Research Chart</bold></h3></caption>
+              <tr>
+              <th>Math</th>
+              <th>Science</th>
+              </tr>
+              <tr>     
+              <td><marquee>Algebra is a branch of mathematics concerning the study of structure, relation and quantity.</marquee></td>          
+              <td><marquee>Solar system consists of the Sun and the other celestial objects gravitationally bound to it: the eight planets, their 166 known moons, three dwarf planets, and billions of small bodies.</marquee></td>                 
+	      </tr>
+              <tr>
+              <td><marquee>Roman numerals are a numeral system originating in ancient Rome, adapted from Etruscan numerals.</marquee></td> 
+              <td><marquee>Nuclear reaction is a process in which two nuclei or nuclear particles collide to produce products different from the initial particles.</marquee></td> 
+              </tr>
+              </table>
+	      <a href="M-Sframe.html"><h3>Back</h3></a><br> 
+
+                </center>
+                </font>
+           </body>
+</html>
+
+

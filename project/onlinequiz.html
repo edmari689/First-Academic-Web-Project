@@ -1,0 +1,252 @@
+<html>
+   <head>
+      <title>English</title>
+   
+
+
+   <!--to make a bouncing ball -->
+<div align="center" id="staticBall" style="position:relative;visibility:visible">
+<img src="book.jpg" height=30 width=30 alt="Static ball">
+</div>
+</center>
+<div id="ball" style="visibility:hidden; position:absolute; left:100; top:10; height:34; width:34">
+<img src="book.jpg" height=30 width=30 alt="Bouncing ball">
+</div>
+
+<script language="Javascript">
+<!-- Begin
+iter = 0;
+setId = 0;
+down = true;
+up = false;
+var ns = ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) >= 4));
+ie=!ns;
+bouncingBall =  document.getElementById("ball").style;
+stillBall = document.getElementById("staticBall").style;
+var winH ;//= (ns) ? window.innerHeight - 55 : document.body.offsetHeight - 55;
+document.onmouseup = buttonUp;
+if (ns)
+document.captureEvents(Event.MOUSEUP);
+function buttonUp(e) {
+winH = (ns) ? window.innerHeight - 55 +window.scrollY: document.body.offsetHeight - 55 +document.body.scrollTop;
+if ( ((ns) ? e.which : event.button) != 1) return true;
+if (setId != 0) clearInterval(setId);
+bouncingBall.visibility="visible";
+stillBall.visibility="hidden";
+bouncingBall.left = (ns) ? e.pageX - 15 : event.clientX - 15;
+bouncingBall.top = (ns) ? e.pageY - 15 : event.clientY - 15+document.body.scrollTop;
+iter = 0;
+setId = setInterval("generateGravity()", 20);
+return true;
+}
+function generateGravity() {
+if ((parseInt(bouncingBall.top)+iter < winH) && down) {
+bouncingBall.top = parseInt(bouncingBall.top) + iter;
+iter++;
+return;
+}
+else {
+if ((parseInt(bouncingBall.top)< winH) && down) {
+bouncingBall.top = winH + 5;
+return;
+}
+down = false;
+up = true;
+if (iter < 0 && parseInt(bouncingBall.top) > winH) {
+clearInterval(setId);
+bouncingBall.visibility = "hidden";
+stillBall.visibility="visible";
+setId = 0;
+}
+if (parseInt(bouncingBall.top) > 0 && up && iter >= 0) {
+bouncingBall.top = parseInt(bouncingBall.top) - iter;
+iter--;
+if (iter%3 == 0) iter--;
+return;
+}
+down = true;
+up = false;
+   }
+}
+// End -->
+</script>
+
+
+
+
+   <head>
+      <body background="de la salle taft.jpg">
+      
+      <style>.spanstyle {
+COLOR: red; FONT-FAMILY: Verdana; FONT-SIZE: 8pt; FONT-WEIGHT: bold; POSITION: absolute; TOP: -50px; VISIBILITY: visible
+}
+body {
+OVERFLOW-X: hidden; OVERFLOW-Y: scroll; WIDTH: 100%
+}
+</style>
+<script language="javascript" type="text/javascript">       
+/* Visit http://www.yaldex.com/ for full source code
+and get more free JavaScript, CSS and DHTML scripts! */
+<!-- Begin
+var x, y;
+var step = 10;
+var flag = 0;
+
+var message = "Welcome to Online Quiz ";
+message = message.split("");
+var xpos = new Array();
+for (i = 0; i <= message.length - 1; i++) {
+xpos[i] = -50;
+}
+var ypos = new Array();
+for (i = 0; i <= message.length - 1; i++) {
+ypos[i]= -50;
+}
+function handlerMM(e) {
+x = (!document.all) ? e.pageX : document.body.scrollLeft + event.clientX;
+y = (!document.all) ? e.pageY : document.body.scrollTop + event.clientY;
+flag = 1;
+}
+function makesnake() {
+if (flag == 1 && document.all) {
+for (i = message.length - 1; i >= 1; i--) {
+xpos[i] = xpos[i - 1] + step;
+ypos[i] = ypos[i - 1];
+}
+xpos[0] = x + step;
+ypos[0] = y;
+for (i = 0; i < message.length - 1; i++) {
+var thisspan = eval("document.getElementById('span" + i + "').style");
+thisspan.posLeft = xpos[i];
+thisspan.posTop = ypos[i];
+   }
+}
+else if (flag==1 && !document.all) {
+for (i = message.length - 1; i >= 1; i--) {
+xpos[i] = xpos[i - 1] + step;
+ypos[i] = ypos[i - 1];
+}
+xpos[0] = x + step;
+ypos[0] = y;
+for (i = 0; i < message.length - 1; i++) {
+var thisspan = eval("document.getElementById('span" + i + "').style");
+thisspan.left = xpos[i];
+thisspan.top = ypos[i];
+   }
+}
+var timer = setTimeout("makesnake()", 10);
+}
+window.onload = makesnake;
+// End -->
+</script>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+for (i = 0; i <= message.length-1; i++) {
+document.write("<span id='span"+i+"' class='spanstyle'>");
+document.write(message[i]);
+document.write("</span>");
+}
+if (!document.all) {
+document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+// End -->
+</script>       
+
+
+
+
+        <font color="#ff0000" size="5" face=" Times New Roman">
+        <center>
+        <h1>Conjunction</h1><br>
+        <strong>Fullname</strong><input type="textbox" maxlength="30"><br>
+        <strong>Age</strong><input type="textbox" maxlength="10"><br>
+        <form>    
+        <strong>Answer the following questions:</strong><br>
+            <h2><bold>Types of Conjunction</bold></h2><br>
+            <strong>1. what is the word that does not refer to coordinating conjunction?</strong><input type="radio" name="q1" value="and">and<input type="radio" name="q1" value="both">both<input type="radio" name="q1" value="yet">yet<input type="radio" name="q1" value="nor">nor<br>
+            <strong>2. what is the word that does not refer to correlative conjunction?</strong><input type="radio" name="q2" value="not only">not only<input type="radio" name="q2" value="or">or<input type="radio" name="q2" value="either">either<input type="radio" name="q2" value="neither">neither<br>
+            <strong>3. what is the word that does not refer to subordinating conjunction?</strong><input type="radio" name="q3" value="until">until<input type="radio" name="q3" value="so that">so that<input type="radio" name="q3" value="after">after<input type="radio" name="q3" value="for">for<br>
+            <strong>4. what is the word that does refer to coordinating conjunction?</strong><input type="radio" name="q4" value="and">and<input type="radio" name="q4" value="both">both<input type="radio" name="q4" value="if">if<input type="radio" name="q4" value="as">as<br>
+            <strong>5. what is the word that does refer to correlative conjunction?</strong><input type="radio" name="q5" value="since">since<input type="radio" name="q5" value="although">although<input type="radio" name="q5" value="neither">neither<input type="radio" name="q5" value="but">but<br>
+            <strong>6. what is the word that does refer to subordinating conjunction?</strong><input type="radio" name="q6" value="yet">yet<input type="radio" name="q6" value="than">than<input type="radio" name="q6" value="so">so<input type="radio" name="q6" value="not only">not only<br>
+            <strong>7. Which word that can connect the pair with the word "both" in correlative conjunction?</strong><input type="radio" name="q7" value="and">and<input type="radio" name="q7" value="and also">and also<input type="radio" name="q7" value="or">or<br>
+            <strong>8. Which word that can connect the pair with the word "whether" in correlative conjunction?</strong><input type="radio" name="q8" value="nor">nor<input type="radio" name="q8" value="or only">or only<input type="radio" name="q8" value="or">or<br>
+            <strong>9. Which word that can connect the pair with the word "not only" in correlative conjunction?</strong><input type="radio" name="q9" value="but">but<input type="radio" name="q9" value="but only">but only<input type="radio" name="q9" value="but only">but only<br>
+            <strong>10. Is the word "why" included in any type of conjunction?</strong><input type="radio" name="q10" value="yes">yes<input type="radio" name="q10" value="no">no<br>
+            <bold>Check the best answer/s</bold><br>
+            <strong>11. Which word/s can you find in indefinite pronouns as the same as any type of conjunction?</strong><input type="checkbox" name="q11" value="both">both<input type="checkbox" name="q11" value="neither">neither<input type="checkbox" name="q11" value="each">each<input type="checkbox" name="q11" value="but">but<br>
+            <strong>12. Which word/s can you find in prepositions as the same as any type of conjunction?</strong><input type="checkbox" name="q12" value="until">until<input type="checkbox" name="q12" value="along">along<input type="checkbox" name="q12" value="since">since<input type="checkbox" name="q12" value="till">till<br>
+            <strong>13. Which word/s can you find in questions as the same as any type of conjunction?</strong><input type="checkbox" name="q13" value="when">when<input type="checkbox" name="q13" value="who">who<input type="checkbox" name="q13" value="which">which<input type="checkbox" name="q13" value="where">where<br>
+            <bold>Check only one</bold><br>
+            <strong>14. Is there a lot of words of conjunction in any kinds of pronoun?</strong><input type="checkbox" name="q14" value="often">often<input type="checkbox" name="q14" value="few">few<input type="checkbox" name="q14" value="never">never<input type="checkbox" name="q14" value="sometimes">sometimes<br>
+            <h2><bold>Identification</bold></h2><br>
+            <strong>15. My brother was spent his money, ___ i save my money in everyday.</strong><input type="checkbox" name="q15" value="so">so<input type="checkbox" name="q15" value="and">and<input type="checkbox" name="q15" value="yet">yet<input type="checkbox" name="q15" value="for">for<br>
+            <strong>16. ___ Mount Pinatubo nor Mount Mayon exploded last two years.</strong><input type="checkbox" name="q16" value="whether">whether<input type="checkbox" name="q16" value="neither">neither<input type="checkbox" name="q16" value="either">either<input type="checkbox" name="q16" value="for">for<br>
+            <strong>17. ___ the woman saw the ghosts, she was sreamed and run away from them.</strong><input type="checkbox" name="q17" value="if">if<input type="checkbox" name="q17" value="when">when<input type="checkbox" name="q17" value="until">until<input type="checkbox" name="q17" value="after">after<br>                 
+            <h2><bold>Identifying errors</bold></h2><br>
+            <strong>18. Whether i played roughly nor i fought badly to my friends.</strong><input type="checkbox" name="q18" value="nor">nor<input type="checkbox" name="q18" value="whether">whether<input type="checkbox" name="q18" value="my">my<br>
+            <strong>19. Since i met my challengers, as if they were not enemies at all.</strong><input type="checkbox" name="q19" value="since">since<input type="checkbox" name="q19" value="as if">as if<input type="checkbox" name="q19" value="if">if<br>
+            <strong>20. i thought your are my best chief, but you never lie to me than i could do it.</strong><input type="checkbox" name="q20" value="but">but<input type="checkbox" name="q20" value="than">than<input type="checkbox" name="q20" value="no errors">no errors<br>
+            <strong>21. If you use the conjunction in the sentence, which the part of speech will not use in the sentence?</strong><select name="q21"><option value="select answer">select answer<option value="relative pronoun">option1<option value="adverbs">adverbs<option value="interjections">interjections</select><br>
+            <strong>22. How do you express the word "why" in the part of speech. If you use it, it is better to use with conjunction?</strong><select name="q22"><option value="select answer">select answer<option value="often">often<option value="sometimes">sometimes<option value="never">never</select><br>
+            <strong>23. If you use the types of conjunction, can you determine whether you use the figures of speech or not?</strong><select name="q23"><option value="select answer">select answer<option value="always">always<option value="sometimes">sometimes<option value="never">never</select><br>
+            <strong>24. If you are the author, are you using the conjunction in every sentences?</strong><select name="q24"><option value="select answer">select answer<option value="most of the time">most of the time<option value="always use it">always use it</select><br>
+            <strong>25. Does the conjunction can relate the parts of speech like nouns, verbs, interjection and others?</strong><select name="q25"><option value="select answer">select answer<option value="yes">yes<option value="no">no</select><br>
+             
+            <input type="submit" value="Check my answers">
+            <input type="reset" value="Clear"><br>
+
+            <strong>Thank you for answering these questions. If you want to say your comments, please type it inside the box.</strong><br>
+            
+            <script language="javascript" type="text/javascript">
+
+<!-- Begin
+function textCounter(field, countfield, maxlimit) {
+if (field.value.length > maxlimit) // if too long...trim it!
+field.value = field.value.substring(0, maxlimit);
+// otherwise, update 'characters left' counter
+else
+countfield.value = maxlimit - field.value.length;
+}
+// End -->
+</script>
+<!-- textCounter() parameters are:  text field, the count field, max length -->
+<form name=myform action="YOUR-SCRIPT.CGI">
+<font size="1" face="arial, helvetica, sans-serif"> ( You may enter up to 800 characters. )<br>
+<textarea name=message wrap=physical cols=30 rows=5 onKeyDown="textCounter(this.form.message,this.form.remLen,800);" onKeyUp="textCounter(this.form.message,this.form.remLen,800);"></textarea>
+<br>
+<input readonly type=text name=remLen size=3 maxlength=3 value="800"> characters left</font><br>
+
+
+               <input type="submit" value="Send">
+               <input type="reset" value="Clear"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </center>
+                </form>
+                </font>
+           </font>
+</html>
+
+
+
+
+
+
+
+
+
+
+                

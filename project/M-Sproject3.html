@@ -1,0 +1,134 @@
+<html>
+   <head>
+      <title>Math - Sci Week</title>
+   
+
+
+    </head>
+      
+
+
+
+    <body background="2456597643.jpg">
+    <bgsound src="K:\project\Saved\Backstreet Boys - I Need You Tonight(1).mp3" loop="-1">           
+
+
+
+
+       <style>.spanstyle {
+COLOR: red; FONT-FAMILY: Verdana; FONT-SIZE: 8pt; FONT-WEIGHT: bold; POSITION: absolute; TOP: -50px; VISIBILITY: visible
+}
+body {
+OVERFLOW-X: hidden; OVERFLOW-Y: scroll; WIDTH: 100%
+}
+</style>
+<script language="javascript" type="text/javascript">       
+/* Visit http://www.yaldex.com/ for full source code
+and get more free JavaScript, CSS and DHTML scripts! */
+<!-- Begin
+var x, y;
+var step = 10;
+var flag = 0;
+
+var message = "Welcome to Math-Science website ";
+message = message.split("");
+var xpos = new Array();
+for (i = 0; i <= message.length - 1; i++) {
+xpos[i] = -50;
+}
+var ypos = new Array();
+for (i = 0; i <= message.length - 1; i++) {
+ypos[i]= -50;
+}
+function handlerMM(e) {
+x = (!document.all) ? e.pageX : document.body.scrollLeft + event.clientX;
+y = (!document.all) ? e.pageY : document.body.scrollTop + event.clientY;
+flag = 1;
+}
+function makesnake() {
+if (flag == 1 && document.all) {
+for (i = message.length - 1; i >= 1; i--) {
+xpos[i] = xpos[i - 1] + step;
+ypos[i] = ypos[i - 1];
+}
+xpos[0] = x + step;
+ypos[0] = y;
+for (i = 0; i < message.length - 1; i++) {
+var thisspan = eval("document.getElementById('span" + i + "').style");
+thisspan.posLeft = xpos[i];
+thisspan.posTop = ypos[i];
+   }
+}
+else if (flag==1 && !document.all) {
+for (i = message.length - 1; i >= 1; i--) {
+xpos[i] = xpos[i - 1] + step;
+ypos[i] = ypos[i - 1];
+}
+xpos[0] = x + step;
+ypos[0] = y;
+for (i = 0; i < message.length - 1; i++) {
+var thisspan = eval("document.getElementById('span" + i + "').style");
+thisspan.left = xpos[i];
+thisspan.top = ypos[i];
+   }
+}
+var timer = setTimeout("makesnake()", 10);
+}
+window.onload = makesnake;
+// End -->
+</script>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+for (i = 0; i <= message.length-1; i++) {
+document.write("<span id='span"+i+"' class='spanstyle'>");
+document.write(message[i]);
+document.write("</span>");
+}
+if (!document.all) {
+document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+// End -->
+</script>       
+
+
+
+
+
+              <font color="" size="6" face=" Times New Roman">
+              <center>
+              <h1>Science</h1>
+              <img src="2967844772.jpg" width="125" height="125">              
+              <h2>Solar System</h2>
+              <p><H4>The Solar System consists of the Sun and the other celestial objects gravitationally bound to it: the eight planets, their 166 known moons, three dwarf planets (Ceres, Pluto, and Eris and their four known moons), and billions of small bodies. This last category includes asteroids, Kuiper belt objects, comets, meteoroids, and interplanetary dust.
+
+In broad terms, the charted regions of the Solar System consist of the Sun, four terrestrial inner planets, an asteroid belt composed of small rocky bodies, four gas giant outer planets, and a second belt, the Kuiper belt, composed of icy objects. Beyond the Kuiper belt is the scattered disc, the heliopause, and ultimately the hypothetical Oort cloud.</H4></p><br>
+              <H2>Generalist and Specialist Species</h2>
+              <p><h4>A generalist species is able to thrive in a wide variety of environmental conditions and can make use of a variety of different resources (for example, a heterotroph with a varied diet). Specialist species can only thrive in a narrow range of environmental conditions and/or have a limited diet. Organisms do not fit neatly into either group, however. Some species are highly specialized, others less so, while some can tolerate many different environments. In other words, there is a continuum from highly specialized to broadly generalist species.
+
+Omnivores, which eat both plants and animals, are usually generalists. Herbivores are often specialists, but those that eat a variety of plants may be considered generalists. A well-known example of a specialist animal is the koala which subsists almost entirely on eucalyptus leaves. The raccoon is a generalist because it has a natural range that includes most of North and Central America, and it is omnivorous, eating berries, insects, eggs and small animals.
+
+</h4></p><br>
+              <h2>Electricity</h2>
+              <p><h4>Electricity is a general term that encompasses a variety of phenomena resulting from the presence and flow of electric charge. These include many easily recognisable phenomena such as lightning and static electricity, but in addition, less familiar concepts such as the electromagnetic field and electromagnetic induction.
+
+</h4></p><br>
+              <h2>Hydrosphere</h2>
+              <p><h4>A hydrosphere in physical geography describes the collective mass of water found on, under, and over the surface of a planet. The Earth's hydrosphere consists of water in all forms: the ocean (which is the bulk of the hydrosphere), other surface waters including inland seas, lakes, and rivers; rain; underground water; ice (as in glaciers and snow); and atmospheric water vapor (as in clouds). 
+
+</h4></p><br>
+              <h2>Biome</h2>
+              <p><h4>A biome is a climatically and geographically defined area of ecologically similar communities of plants, animals, and soil organisms, often referred to as ecosystems. Biomes are defined based on factors such as plant structures (such as trees, shrubs, and grasses), leaf types (such as broadleaf and needleleaf), plant spacing (forest, woodland, savanna), and climate. Unlike ecozones, biomes are not defined by genetic, taxonomic, or historical similarities. Biomes are often identified with particular patterns of ecological succession and climax vegetation.
+
+The biodiversity characteristic of each biome, especially the diversity of fauna and subdominant plant forms, is a function of abiotic factors and the biomass productivity of the dominant vegetation. Species diversity tends to be higher in terrestrial biomes with higher net primary productivity, moisture availability, and temperature.
+</h4></p><br>
+               <a href="M-Sframe.html"><h3>Back</h3></a><br>
+
+
+               
+               </center>
+               </font>
+           </body>
+</html>
+
+
